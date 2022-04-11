@@ -1,0 +1,159 @@
+[
+ {
+  "id":"Kerala",
+  "name":"Kerala",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"Tamil Nadu",
+  "name":"Tamil Nadu",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"Karnadaka",
+  "name":"Karnadaka",
+  "parent_id":"0"
+ },  
+  
+ {
+  "id":"4",
+  "name":"Alappuzha",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"5",
+  "name":"Ernakulam",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"6",
+  "name":"Idukki",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"7",
+  "name":"Kannur",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"8",
+  "name":"Kasaragod",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"9",
+  "name":"Kollam",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"10",
+  "name":"Kottayam",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"11",
+  "name":" Kozhikode",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"12",
+  "name":"Malappuram",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"13",
+  "name":"Palakkad",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"14",
+  "name":"Pathanamthitta",
+  "parent_id":"Kerala"
+ },  
+ {
+  "id":"12",
+  "name":"Wayanad",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"13",
+  "name":"Thrissur",
+  "parent_id":"Kerala"
+ }, 
+ {
+  "id":"14",
+  "name":"Thiruvananthapuram",
+  "parent_id":"Kerala"
+ }, 
+  
+ 
+ 
+ 
+ 
+
+
+ {
+  "id":"15",
+  "name":"Ariyalur",
+  "parent_id":"Tamil Nadu"
+ }, 
+ {
+  "id":"16",
+  "name":"Chengalpattu",
+  "parent_id":"Tamil Nadu"
+ }, 
+ {
+  "id":"17",
+  "name":"Chennai",
+  "parent_id":"Tamil Nadu"
+ }, 
+ {
+  "id":"18",
+  "name":"Coimbatore",
+  "parent_id":"Tamil Nadu"
+ }, 
+ {
+  "id":"19",
+  "name":"Cuddalore",
+  "parent_id":"Tamil Nadu"
+ }, 
+ {
+  "id":"20",
+  "name":"Kanyakumari",
+  "parent_id":"Tamil Nadu"
+ }, 
+ {
+  "id":"22",
+  "name":"Bangalore",
+  "parent_id":"Karnadaka"
+ }, 
+ {
+  "id":"22",
+  "name":"Belgaum",
+  "parent_id":"Karnadaka"
+ }, 
+ {
+  "id":"22",
+  "name":"Bellary",
+  "parent_id":"Karnadaka"
+ }, 
+ {
+  "id":"22",
+  "name":"Bidar",
+  "parent_id":"Karnadaka"
+ }, 
+ {
+  "id":"22",
+  "name":"Shimoga",
+  "parent_id":"Karnadaka"
+ }, 
+ {
+  "id":"22",
+  "name":"Mysore",
+  "parent_id":"Karnadaka"
+ } 
+ 
+
+
+
+]

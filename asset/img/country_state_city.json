@@ -1,0 +1,159 @@
+[
+ {
+  "id":"1",
+  "name":"Kerala",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"2",
+  "name":"Tamil Nadu",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"3",
+  "name":"Karnadaka",
+  "parent_id":"0"
+ },  
+  
+ {
+  "id":"4",
+  "name":"Alappuzha",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"5",
+  "name":"Ernakulam",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"6",
+  "name":"Idukki",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"7",
+  "name":"Kannur",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"8",
+  "name":"Kasaragod",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"9",
+  "name":"Kollam",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"10",
+  "name":"Kottayam",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"11",
+  "name":" Kozhikode",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"12",
+  "name":"Malappuram",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"13",
+  "name":"Palakkad",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"14",
+  "name":"Pathanamthitta",
+  "parent_id":"1"
+ },  
+ {
+  "id":"12",
+  "name":"Wayanad",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"13",
+  "name":"Thrissur",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"14",
+  "name":"Thiruvananthapuram",
+  "parent_id":"1"
+ }, 
+  
+ 
+ 
+ 
+ 
+
+
+ {
+  "id":"15",
+  "name":"Ariyalur",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"16",
+  "name":"Chengalpattu",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"17",
+  "name":"Chennai",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"18",
+  "name":"Coimbatore",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"19",
+  "name":"Cuddalore",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"20",
+  "name":"Kanyakumari",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"22",
+  "name":"Bangalore",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"22",
+  "name":"Belgaum",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"22",
+  "name":"Bellary",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"22",
+  "name":"Bidar",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"22",
+  "name":"Shimoga",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"22",
+  "name":"Mysore",
+  "parent_id":"3"
+ } 
+ 
+
+
+
+]
