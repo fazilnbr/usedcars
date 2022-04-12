@@ -1,93 +1,92 @@
-<!DOCTYPE html>
-
-<?php
-
-// Database configuration
-$dbHost     = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName     = "codexworld";
-
-// Create database connection
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-// Check connection
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-}
-
-// Include the database configuration file
-// include 'dbConfig.php';
-$statusMsg = '';
-
-// File upload path
-$targetDir = "uploads/";
-$fileName = basename($_FILES["file"]["name"]);
-$targetFilePath = $targetDir . $fileName;
-$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    // echo "hi";
-    // Allow certain file formats
-    // $fileType='';
-    $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    if(in_array($fileType, $allowTypes)){
-        // Upload file to server
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-            // Insert image file name into database
-            $sql="INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())";
-            echo $sql;
-            $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-            if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again.";
-            } 
-        }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
+<style type="text/css">
+        body
+        {
+            background-color: #0f343a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
-    }
-}else{
-    $statusMsg = 'Please select a file to upload.';
-}
+        #heading
+        {
+            color: #aaaaaa;
+            font-size:50px;
+            text-align: center;
+            
+        }
+        #cont
+        {
+            padding-left: 50px;
+            font-size: 20px;
+            color: #FFFFFF;
+            display: block;
+            justify-content :center;
+            width: 1300px;
+            height: 700px;
+            background-color: aqua;
+            background-image:url('bgimg.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 10px;
 
-// Display status message
-echo $statusMsg;
-?>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-<form action="" method="post" enctype="multipart/form-data">
-    Select Image File to Upload:
-    <input type="file" name="file">
-    <input type="submit" name="submit" value="Upload">
-</form>
-
-<?php
-// Include the database configuration file
-// include 'dbConfig.php';
-
-// Get images from the database
-$query = $db->query("SELECT * FROM images ORDER BY uploaded_on DESC");
-
-if($query->num_rows > 0){
-    while($row = $query->fetch_assoc()){
-        $imageURL = 'uploads/'.$row["file_name"];
-?>
-    <img src="<?php echo $imageURL; ?>" alt="" />
-<?php }
-}else{ ?>
-    <p>No image(s) found...</p>
-<?php } ?>
-    
-</body>
-</html>
+        }
+        #log
+        {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        #search
+        {
+            font-size: 20px;
+            margin-top: 25px;
+            padding-left: 150px;
+            display: flex;
+        }
+        #searchl
+        {
+            width: 250px;
+            margin: 8px 0;
+        }
+        
+        #searchr
+        {
+            width: 200px;
+            justify-content: center;
+        }
+        input[type=text],[type=password],[type=email]
+        {
+            padding: 6px 14px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #aaaaaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+                
+        input[type=submit],[type=button]
+        {
+            
+            background-color: #aaaaaa;
+            color: black;
+            padding: 8px 16px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        select
+        {
+            padding: 4px 14px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #aaaaaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        span 
+        {
+            
+            font-size: 10px;     
+            margin:auto;       
+        }
+    </style>

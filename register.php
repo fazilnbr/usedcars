@@ -98,89 +98,12 @@ else {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <style type="text/css">
-        body
-        {
-            background-color: #0f343a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: red;
-        }
-        #heading
-        {
-            color: #aaaaaa;
-            font-size:50px;
-            text-align: center;
-            
-        }
-        #cont
-        {
-            padding-left: 50px;
-            font-size: 20px;
-            color: #FFFFFF;
-            display: block;
-            justify-content :center;
-            width: 1300px;
-            min-height: 700px;
-            height: auto;
-            background-color: #000000;
-            background-image:url('bgimg.jpg');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            border-radius: 10px;
-            padding-bottom: 30px;
-
-        }
-        #search
-        {
-            font-size: 20px;
-            margin-top: 5px;
-            padding-left: 150px;
-            display: flex;
-        }
-        #searchl
-        {
-            width: 300px;
-            margin: 8px 0;
-        }
-        
-        #searchr
-        {
-            width: 200px;
-            justify-content: center;
-        }
-        #searchrr
-        {
-            width: 200px;
-            justify-content: center;
-            font-size: 18px;
-        }
-        input[type=text],[type=email],[type=number],[type=password],[type=tel]
+    input[type=text],[type=email],[type=number],[type=password],[type=tel]
         {
             padding: 6px 14px;
             margin: 7px 0;
-            display: inline-block;
-            border: 1px solid #aaaaaa;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-                
-        input[type=submit] 
-        {
-            
-            background-color: #aaaaaa;
-            color: black;
-            padding: 8px 16px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        select
-        {
-            padding: 6px 14px;
-            margin: 8px 0;
             display: inline-block;
             border: 1px solid #aaaaaa;
             border-radius: 4px;

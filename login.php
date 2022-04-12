@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-
-
 <?php
 if (!isset($_SESSION)) { session_start(); }
 include("connection.php");
 $user=$_SESSION['user'];
-// echo $email;
-// $email='fazilkp2000@gmail.com';
-
 $sql="SELECT name FROM user WHERE email='".$user."'";
 $query=mysqli_query($con,"SELECT name FROM user WHERE lid='".$user."'");
 $numrows=mysqli_num_rows($query);  
@@ -19,87 +14,15 @@ $numrows=mysqli_num_rows($query);
         
         }  
     }
-
-
-    // session_start();  
         $_SESSION['user']=$user;  
-      
-        /* Redirect browser */  
-        // header("Location: login.php");  
-
-
 ?>
-
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style type="text/css">
-        body
-        {
-            background-color: #0f343a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color:red;
-        }
-        #heading
-        {
-            color: #aaaaaa;
-            font-size:50px;
-            text-align: center;
-            
-        }
-        #cont
-        {
-            padding-left: 50px;
-            padding-right: 50px;
-            font-size: 20px;
-            color: #FFFFFF;
-            display: block;
-            justify-content :center;
-            width: 1300px;
-            min-height: 700px;
-            height: auto;
-            background-color: #000000;
-            background-image:url('bgimg.jpg');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            border-radius: 10px;
-            padding-bottom: 30px;
-
-        }
-        #search
-        {
-            font-size: 20px;
-            margin-top: 50px;
-            padding-left: 150px;
-            display: flex;
-        }
-        table
-        {
-            width: 100%;
-            color: #aaaaaa;
-        }
-        th
-        {
-            text-align: center;
-        }
-        a:link,:visited
-        {
-            color: #aaaaaa;
-            text-decoration: none;
-        }
-        a:hover 
-        {
-            text-decoration: underline;
-        }
-        
-    </style>
+    <title>Document</title>  
+    <link rel="stylesheet" href="style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
@@ -107,7 +30,6 @@ $numrows=mysqli_num_rows($query);
 <body>
     <div id="cont"> 
         <h1 id="heading">USED CARS</h1>
-        
         <table >
             <tr>
                 <th><a href="login.php">Home                    </a>   </th>
@@ -119,17 +41,10 @@ $numrows=mysqli_num_rows($query);
                 <th><a href="home.php">Logout                   </a>   </th>
             </tr>
         </table>
-        
         <div id="search"><h2>Hai &nbsp;&nbsp;&nbsp; <?php echo $name;   ?></h2></div>
-        
         </div>
     </div>
 </body>
 </html>
-
-
 <script>
-
-
-
 </script>
