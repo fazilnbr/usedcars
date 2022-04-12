@@ -6,8 +6,7 @@
 
  
       if (!isset($_SESSION)) { session_start(); }
-
-        $con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());
+      include("connection.php");
         $user=$_SESSION['user'];
         $cid=$_SESSION['cid']; 
         // echo $cid;

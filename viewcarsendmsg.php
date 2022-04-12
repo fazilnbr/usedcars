@@ -7,7 +7,7 @@ $user=$_SESSION['user'];
 
 if(isset($_POST["send"]))
 {
-    $con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());
+    include("connection.php");
     $user= $_SESSION['user'];
     $cid=   $_SESSION['cid'];
 

@@ -4,8 +4,7 @@
 <?php
 if (!isset($_SESSION)) { session_start(); }
 $user=$_SESSION['user'];
-
-$con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());
+include("connection.php");
 // echo $user;
 
 

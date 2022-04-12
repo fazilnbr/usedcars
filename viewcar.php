@@ -104,7 +104,7 @@ $user=$_SESSION['user'];
             ob_start();
             $b=0;
             echo "<table>";
-            $con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());
+            include("connection.php");
             $sql="SELECT uid,img,city, mfg, model FROM carlist WHERE uid!='".$user."'";
             $query=mysqli_query($con,$sql);
             $numrows=mysqli_num_rows($query);  

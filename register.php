@@ -26,8 +26,7 @@ if(isset($_POST["submit"]))
 
 
 
-    
-    $con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());
+    include("connection.php");
     
     $query0="select * from login where (uname='$email');";
 

@@ -10,8 +10,8 @@ if(isset($_POST["submit"])){
         $email=$_POST['email'];  
         $pwd=$_POST['pwd'];  
 
-    
-        $con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());  
+        include("connection.php");
+
         // mysql_select_db('user_registration') or die("cannot select DB");  
       
         $query=mysqli_query($con,"SELECT * FROM login WHERE uname='".$email."' AND pwd='".$pwd."'");

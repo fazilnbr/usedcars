@@ -133,7 +133,8 @@ $user=$_SESSION['user'];
     
         $b=0;
         echo "<table style='border: 3px solid;background-color: #0f343a;font-size: 25px;'>";
-        $con=mysqli_connect("localhost","root","","usedcar") or die(mysql_error());
+        include("connection.php");
+        
         // $c=0;
         $sql="SELECT user.name,user.phone,msg.msg FROM user INNER JOIN msg on msg.toid='".$user."' AND (user.lid=msg.fromid)";
         // echo $sql;
