@@ -19,7 +19,7 @@ $user=$_SESSION['user'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
@@ -46,7 +46,7 @@ $user=$_SESSION['user'];
 
 
 
-        <div class="frame" style="margin-top: 50px;">
+        <div class="frame" style="margin-top: 50px;color:#0f343a;">
 
 
 
@@ -57,7 +57,7 @@ $user=$_SESSION['user'];
         <?php
         ob_start();
         $b=0;
-        echo "<table>";
+        echo "<table style='color:#ffffff'>";
 
         include("connection.php");
         
@@ -68,6 +68,7 @@ $user=$_SESSION['user'];
                 {   
                 while($row=mysqli_fetch_assoc($query))  
                 {  
+
                     $cid=$row['cid'];
                     $img=$row['img'];
                     $city=$row['city'];
@@ -92,7 +93,7 @@ $user=$_SESSION['user'];
                     Year:".$mfg."<br>
                     Model:".$model."<br><form action='' method='post'>
                     <button type='submit' name='b3' value='".$cid."'>EDIT</button>
-                    <input type='submit' value='DELETE' name='b2' id='b2'></form>
+                    <button type='submit' name='b2' value='".$cid."'>DELETE</button></form>
                     </td></div>";
 
                     
@@ -100,14 +101,16 @@ $user=$_SESSION['user'];
                     if(isset($_POST["b3"]))
                         {
                         $id=$_POST["b3"];
-
+                        echo $id;
                         $_SESSION['user']=$user;
                         $_SESSION['cid']=$id;
                         header("Location: editcar.php");
                         }
                         if(isset($_POST["b2"]))
                         {
-                        $sql="DELETE FROM `carlist` WHERE `carlist`.`cid` = ".$cid.";";
+                            
+                        $id=$_POST["b2"];
+                        $sql="DELETE FROM `carlist` WHERE `carlist`.`cid` = ".$id.";";
                         $query=mysqli_query($con,$sql);
                         session_start();  
                         $user=$_SESSION['user'];
@@ -116,7 +119,8 @@ $user=$_SESSION['user'];
 
                     if($b==3)
                         {
-                            echo "</tr>";                    
+                            echo "</tr>";  
+                            $b=0;                  
                         }
                     }  
             }

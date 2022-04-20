@@ -50,10 +50,10 @@ if($numrows!=0)
             echo "<tr style='border: 3px solid;'>";                    
             $b=$b+1;    
         }
-        echo '<th style="border: 3px solid;"><a href="login.php">'.$i.'                   </a>   </th>
-        <th style="border: 3px solid;"><a href="viewmycar.php">'.$name.'    </a>   </th>
-        <th style="border: 3px solid;"><a href="sellcar.php">'.$phone.'        </a>   </th>
-        <th style="border: 3px solid;"><a href="enquiries.php">'.$msg.'           </a>   </th>
+        echo '<th style="border: 3px solid;">'.$i.'</th>
+        <th style="border: 3px solid;">'.$name.'</th>
+        <th style="border: 3px solid;">'.$phone.'</th>
+        <th style="border: 3px solid;">'.$msg.'</th>
         ';
         if(isset($_POST["b3"]))
         {

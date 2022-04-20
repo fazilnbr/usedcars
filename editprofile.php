@@ -95,8 +95,8 @@ else
             Postal Code:<br><br>
 
             <h4>Your Login Information</h4>
-            Password:        <input type="radio" id="city" minlength="3" name="city" required><br>           
-            Email Id:         <input type="radio" id="city" minlength="3" name="city" required><br>
+            Email Id:         <input type="radio" id="remail" minlength="3" name="remail" onclick="remail()" required><br>
+            Password:        <input type="radio" id="rpwd" minlength="3" name="rpwd" onclick="rpwd()" required><br>           
 
            </div>
            <div id="searchr">
@@ -118,9 +118,9 @@ else
                     
                     <input type="number" id="pin" minlength="6" value="<?php echo $post; ?>" name="post" required><br><br><br><br>
 
+                    <input type="email" id="email" name="email" onkeyup='checkemail();' value="<?php echo $email; ?>" style="display:none" required><br>
                     
-                    <input type="email" id="email" name="email" onkeyup='checkemail();' value="<?php echo $email; ?>" required><br>
-                    <input type="password" id="pwd" name="pwd" onkeyup='checkpwdlen();' value="<?php echo $pwd; ?>" required><br>
+                    <input type="password" id="pwd" name="pwd" onkeyup='checkpwdlen();' value="<?php echo $pwd; ?>" style="display:none" required><br>
                     
 
 
@@ -161,6 +161,28 @@ else
 <script>
     $(document).ready(function(){
 
+
+        remail = function() 
+        {
+            if (document.getElementById('remail').checked) 
+            {
+                document.getElementById('email').style.display='block';
+            } else 
+            {
+                document.getElementById('email').style.display='none';
+            }
+        }   
+
+        rpwd = function() 
+        {
+            if (document.getElementById('rpwd').checked) 
+            {
+                document.getElementById('pwd').style.display='block';
+            } else 
+            {
+                document.getElementById('pwd').style.display='none';
+            }
+        }   
 
 
 

@@ -49,7 +49,7 @@ include("connection.php");
     
     
         
-        header("Location:login.php");  
+        header("Location:viewmycar.php");  
     
         
       
@@ -115,11 +115,32 @@ include("connection.php");
             <!-- <input type="file" id="img" name="img" required> -->
     		<input type="file" name="image" accept="image/*" required id="image">
             <h5>LISTING DETIALS </h5>
-            Fuel Type:          <input type="tel" id="fuel" minlength="4" name="fuel" ><br>
-            Color:              <input type="text" id="color" minlength="3" name="color" ><br>
+            Fuel Type:          
+            <!-- <input type="tel" id="fuel" minlength="4" name="fuel" > -->
+            <select id="fuel" name="fuel" required>
+                <option value="">Fuel Type</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Gas">Gas</option>
+                <option value="Electric">Electric</option>
+              </select>
+            <br>
+            Color:              
+            <!-- <input type="text" id="color" minlength="3" name="color" > -->
+            <select id="color" name="color" required>
+                <option value="">Color</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Gray">Gray</option>
+                <option value="Yellow">Yellow</option>
+              </select>
+            <br>
             Registration No:             <input type="tel" id="reg" minlength="4" name="reg"><br>
             Inshurance Vlid Till:         <input type="tel" id="inshu" minlength="1" name="inshu" ><br>
-            Tell to the buyer why he should buy Your car :<input type="text" id="desc" minlength="" name="desc"><br>
+            Tell to the buyer why he should buy Your car : <textarea id="desc" name="desc" required></textarea><br>
             
 
             

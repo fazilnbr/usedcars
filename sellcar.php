@@ -102,7 +102,23 @@ else {
             
             <h5>CAR INFORMATION</h5>
             MFG Year*:          <input type="tel" id="mfg" minlength="4" name="mfg" required><br>
-            Make*:              <input type="text" id="make" minlength="3" name="make" required><br>
+            Make*:              
+            <select id="make" name="make" required>
+                <option value="">Model</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="citroen">Citroen</option>
+                <option value="ford">Ford</option>
+                <option value="honda">Honda</option>
+                <option value="jaguar">Jaguar</option>
+                <option value="land rover">Land Rover</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="mini">Mini</option>
+                <option value="nissan">Nissan</option>
+                <option value="toyota">Toyota</option>
+                <option value="volvo">Volvo</option>
+              </select>
+            <br>
             Model*:             <input type="tel" id="model" minlength="4" name="model" required><br>
             KMs Driven:         <input type="tel" id="km" minlength="1" name="post" ><br>
             NO.of Owners:       <input type="text" id="owner" minlength="" name="owner"><br>

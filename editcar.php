@@ -23,6 +23,12 @@ if (!isset($_SESSION)) { session_start(); }
                 $mobile =$row["mobile"];
                 $email  =$row["email"];
                 $img    =$row["img"];
+                
+                $fuel   =$row["fuel"];
+                $color  =$row["color"];
+                $reg    =$row["regno"];
+                $inshu  =$row["inshurance"];
+                $desc   =$row["descrp"];
             }
         }
 if(isset($_POST["submit"]))
@@ -36,8 +42,13 @@ if(isset($_POST["submit"]))
     $owner  =$_POST["owner"];
     $price  =$_POST["price"];
     $img    =$_POST["img"];
+    $fuel   =$_POST["fuel"];
+    $color  =$_POST["color"];
+    $reg    =$_POST["reg"];
+    $inshu  =$_POST["inshu"];
+    $desc   =$_POST["desc"];
     $file=addslashes(file_get_contents($_FILES['image']['tmp_name']));
-    $sql="UPDATE `carlist` SET `city`='".$city."',`pin`='".$pin."',`mfg`='".$mfg."',`make`='".$make."',`model`='".$model."',`km`='".$km."',`owners`='".$owner."',`price`='".$price."',`img`='".$file."' WHERE cid='".$cid."'";
+    $sql="UPDATE `carlist` SET `city`='".$city."',`pin`='".$pin."',`mfg`='".$mfg."',`make`='".$make."',`model`='".$model."',`km`='".$km."',`owners`='".$owner."',`price`='".$price."',`img`='".$file."',`fuel`='".$fuel."',`color`='".$color."',`regno`='".$reg."',`inshurance`='".$inshu."',`descrp`='".$desc."' WHERE cid='".$cid."'";
     $query=mysqli_query($con,$sql);
     header("Location:viewmycar.php");  
 }
@@ -83,7 +94,37 @@ else
             NO.of Owners:       <input type="text" id="owner" minlength="" name="owner" value="<?php echo $owner; ?>"><br>
             Expected Price:     <input type="tel" id="price" minlength="" name="price" value="<?php echo $price; ?>"><br>            
             Upload Image    &nbsp;&nbsp;&nbsp;
-    		<input type="file" name="image" accept="image/*" required id="image">             
+    		<input type="file" name="image" accept="image/*" required id="image">  <br>
+            
+            <h5>LISTING DETIALS </h5>
+            Fuel Type:          
+            <!-- <input type="tel" id="fuel" minlength="4" name="fuel" > -->
+            <select id="fuel" name="fuel" required>
+                <option value="<?php echo $fuel; ?>"><?php echo $fuel; ?></option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Gas">Gas</option>
+                <option value="Electric">Electric</option>
+              </select>
+            <br>
+            Color:              
+            <!-- <input type="text" id="color" minlength="3" name="color" > -->
+            <select id="color" name="color" required>
+                <option value="<?php echo $color; ?>"><?php echo $color; ?></option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Gray">Gray</option>
+                <option value="Yellow">Yellow</option>
+              </select>
+            <br>
+            Registration No:             <input type="tel" id="reg" minlength="4" name="reg" value="<?php echo $reg; ?>"><br>
+            Inshurance Vlid Till:         <input type="tel" id="inshu" minlength="1" name="inshu" value="<?php echo $inshu; ?>"><br>
+            Tell to the buyer why he should buy Your car : <textarea id="desc" name="desc" value="<?php echo $desc; ?>" required></textarea><br>
+            
+
             <input type="submit" value="Update" name="submit" onclick="validate()" >
         </form>
         </div>

@@ -35,7 +35,7 @@ $user=$_SESSION['user'];
             <?php
             ob_start();
             $b=0;
-            echo "<table>";
+            echo "<table style='color:#ffffff'>";
             include("connection.php");
             $sql="SELECT uid,img,city, mfg, model FROM carlist WHERE uid!='".$user."'";
             $query=mysqli_query($con,$sql);
@@ -46,7 +46,7 @@ $user=$_SESSION['user'];
                 {  
                     $img=$row['img'];
                     $city=$row['city'];
-                    -    $uid=$row['uid'];
+                    $uid=$row['uid'];
                     $mfg=$row['mfg'];
                     $model=$row['model'];
                     $data = base64_encode($img);
@@ -68,19 +68,12 @@ $user=$_SESSION['user'];
                         $id=$_POST["b3"];
                         $_SESSION['user']=$user;
                         $_SESSION['cid']=$id;
-                        // if (headers_sent()) 
-                        // {
-                        //     die("Redirect failed. Please click on this link: <a href=viewcarsendmsg.php>contact</a>");
-                        // }
-                        // else
-                        // {
-                        //     exit(header("Location:viewcarsendmsg.php"));
-                        // }
                         header("Location:viewcarsendmsg.php");
                     } 
                     if($b==3)
                     {
-                        echo "</tr>";                    
+                        echo "</tr>"; 
+                        $b=0;                   
                     }
                 }  
             }
